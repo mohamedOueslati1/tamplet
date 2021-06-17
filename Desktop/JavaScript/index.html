@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>formulaire</title>
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+<form onclick="envoyer()">
+  <fieldset class="insc">
+    <legend> <h3>Inscription</h3></legend>
+  
+    <div id="formulaire">
+  <div class="name">
+    <label for="name">Prénom et Nom*:</label>
+  <input type="text" id="name" required pattern ='[A-z" "]{6,20}'>
+  </div>
+  <div class="cin">
+    <label for="text">CIN*:</label>
+  <input type="text"required pattern ="[0-9]{8}" id="cin">
+  </div>
+  <div class="mail">
+    <label for="mail">Adresse mail*:</label>
+    <input type="email" name="email" maxlength = '30' id="mail"
+		placeholder ="contact@gmail.com" required
+		pattern ="[A-z0-9._-]+[@]{1}[a-z]+[.]{1}[a0-z]{2,10}" >
+  </div>
+  <div class="niveau">
+    <label for="niveau">Niveau scolaire:</label>
+   
+    <input type="radio" name="secondaire" id="sicondaire" checked >Secondaire
+    <input type="radio" name="secondaire" id="sicondaire">Univairsitaire
+    <input type="radio" name="secondaire" id="sicondaire">Autre
+  </div>
+  <div class="module">
+   <div class="label">
+    <label for="module" id="mode">Modules de formation :</label>
+   </div>
+    <div class="selct">
+      <select name="" id="module" multiple>
+        <option value="HTML5">HTML5</option>
+        <option value="CSS3">CSS3</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="JQuery">JQuery</option>
+      </select>
+    </div>
+  </div>
+  <div class="chon">
+    <div>
+      <label for="">Champs obligatoires</label>
+    </div>
+    <div>
+      <input type="submit" onclick="" value="envoyer">
+    <input type="submit"value="annuler">
+    </div>
+  </div>
+
+       
+       
+    </div>
+
+  </fieldset>
+
+</body>
+</html>
