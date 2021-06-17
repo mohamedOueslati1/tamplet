@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>formulaire</title>
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+<FORM onSubmit="return verif()">
+  <fieldset class="insc">
+    <legend> <h3>Inscription</h3></legend>
+  
+    <div id="formulaire">
+  <div class="name">
+    <label for="name">Prénom et Nom*:</label>
+  <input type="text" id="name">
+  </div>
+  <div class="cin">
+    <label for="text">CIN*:</label>
+  <input type="text"id="cin">
+  </div>
+  <div class="mail">
+    <label for="mail">Adresse mail*:</label>
+    <input type="email" name="mail" maxlength = '30'placeholder ="contact@gmail.com"id="mail">
+  </div>
+  <div class="niveau">
+    <label for="niveau">Niveau scolaire:</label>
+   
+    <input type="radio" name="secondaire" id="sicondaire" checked >Secondaire
+    <input type="radio" name="secondaire" id="sicondaire">Univairsitaire
+    <input type="radio" name="secondaire" id="sicondaire">Autre
+  </div>
+  <div class="module">
+   <div class="label">
+    <label for="module" id="mode">Modules de formation :</label>
+   </div>
+    <div class="selct">
+      <select name="" id="module" multiple>
+        <option value="HTML5">HTML5</option>
+        <option value="CSS3">CSS3</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="JQuery">JQuery</option>
+      </select>
+    </div>
+  </div>
+  <div class="chan">
+    <div>
+      <label for="">Champs obligatoires</label>
+    </div>
+    <div>
+      <input type="submit"value="envoyer">
+    <input type="submit"value="annuler">
+    </div>
+  </div>
+
+       
+       
+    </div>
+
+  </fieldset>
+<script language ="JavaScript">
+function verif()
+{ if(document.f.name.value == "") {
+alert("Veuillez entrer votre nom!");
+return false;}
+
+
+if(document.f.cin.value.charAt(0).toUpperCase()!= document.f.cin.value.charAt(0) ) {
+alert("le premier caractere du nom n'est pas majuscule!");
+return false;}
+
+
+if(document.f.email.value == "") {
+alert("Veuillez entrer votre adresse électronique!");
+return false; }
+if(document.f.email.value.indexOf('@') == -1) {
+alert("Ce n'est pas une adresse électronique!");
+return false; }
+var test = 1;
+for(i=0;i<document.f.cin.value.length;++i)
+if(document.f.cin.value.charAt(i) < "0"
+|| document.f.cin.value.charAt(i) > "9")
+test = -1;
+if(test == -1) { alert("la cin n'est pas un nombre!");
+return false; }}
+</form>
+</SCRIPT>
+</body>
+</html>
